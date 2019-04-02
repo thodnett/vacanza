@@ -6,3 +6,50 @@
     color: #000000;
     
 }
+
+.card-header {
+    font-family: "Lato", sans-serif;
+    font-size: large;
+    
+}
+
+.card-body {
+    font-family: "Lato", sans-serif;
+}
+
+.h-head {
+    font-family: "Lato", sans-serif;
+    
+    
+}
+
+.h-para {
+    font-family: "Lato", sans-serif;
+    
+}
+
+.h-search {
+    font-family: "Lato", sans-serif;
+    
+}
+
+.hotels {
+    background-color: #256cdd;
+}
+
+.foods {
+    background-color: #8fb1e8;
+}
+
+.attract {
+    background-color: #28b2bf;
+}
+
+.c-foot {
+    background-color: #235b60;
+    
+}
+
+#map-canvas {
+    height: 400px;
+}
