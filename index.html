@@ -9,7 +9,9 @@
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css" type="text/css" />
-
+  
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCulZQEPBA_aT5iBYTL20xK1MnDR_vH_EA&callback=initMap"></script>
+  
 
   <title>Travel</title>
 </head>
@@ -80,22 +82,22 @@
 
 </header>
 
-<body>
-  <section>
-    <div class="card text-center">
-      <div class="card-header">
-        Where will you go?
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">Find the perfect place!</h5>
-        <p class="card-text">Using our interactive map discover which city is the best for you.</p>
-       <button type="button" class="launch-map" data-toggle="modal" data-target="#mapModal">
+
+<section>
+  <div class="card text-center">
+    <div class="card-header">
+      Where will you go?
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Find the perfect place!</h5>
+      <p class="card-text">Using our interactive map discover what each city has to offer!</p>
+      <button type="button" class="launch-map" data-toggle="modal" data-target="#mapModal">
   Open Map
 </button>
-      </div>
     </div>
-    
- <div class="modal fade" id="mapModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+  </div>
+
+<div class="modal fade" id="mapModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
   <div class="modal-dialog" role="map">
     <div class="modal-content">
       <div class="modal-header">
@@ -104,65 +106,36 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div id ="modal">
-      <div class="modal-body">
-        <div id= "map-canvas"></div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <div id="modal">
+        <div class="modal-body">
+          <div id="map-canvas"></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
-</div>
-  </section>
+</section>
 
-  <section class= "hotels" id= "hotel">
-    <h2 class="h-head">Find your destination!</h2>
-    <p class="h-para">Which city will you choose?</p>
-    <div class="hotel">
-      <label>Search for Hotels</label>
-      <select id ="my h-list">
-        <option value = "h-Rome">Rome</option>
-        <option value = "h-Venice">Venice</option>
-        <option value = "h-Venice">Milan</option>
-        <option value = "h-Naples">Naples</option>
-      </select>
-      <div id="h-result"></div>
-    </div>
-  </section>
+
   
-  <section class="foods" id= "food">
-    <h2 class="h-head">Where will you eat?</h2>
-    <p class="h-para">Find the best restaurants.</p>
-    <div class="restaurant">
-      <label>Search for Restaurants</label>
-      <select id ="my r-list">
-        <option value = "f-Rome">Rome</option>
-        <option value = "f-Venice">Venice</option>
-        <option value = "f-Milan">Milan</option>
-        <option value = "f-Naples">Naples</option>
-      </select>
-      <div id="f-result"></div>
+<div id="findhotels">
+      Find hotels in:
     </div>
-  </section>
 
-
-  <section class= "attract" id = "attractions">
-    <h2 class="h-head">What will you see?</h2>
-    <p class="h-para">Find the best attractions and sights!</p>
-     <div class="attracts">
-      <label>Search for Attractions</label>
-      <select id ="my a-list">
-        <option value = "a-Rome">Rome</option>
-        <option value = "a-Venice">Venice</option>
-        <option value = "a-Milan">Milan</option>
-        <option value = "a-Naples">Naples</option>
-      </select>
-      <div id="a-result"></div>
-  </section>
-  
-</body>
+<div id="h-search">
+  <div id="h-s">
+    <input type="text" placeholder="Search for hotels" id="hsearchbar" class="form-control">
+  </div>
+  <ul class="list-group" id="result"></ul>
+      
+    
+</div>
+    
+   
+        
 
 
 
@@ -172,13 +145,12 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCulZQEPBA_aT5iBYTL20xK1MnDR_vH_EA&callback=initMap"></script>
 <script type="text/javascript" src="Assets/maps.js"></script>
+
 
 </body>
 
-<footer class = "c-foot">
+<footer class="c-foot">
   <h4> Created by Tania Hodnett</h4>
 
 </footer>
