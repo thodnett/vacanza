@@ -1,15 +1,28 @@
-$(document).ready(function(){
-  $("hsearch").keyup(function(){
-    $("result").html();
-    var searchField = $("hsearch").val();
-    var expression = new RegExp(searchField, "i");
-      $.getJSON('https://maps.googleapis.com/maps/api/place/nearbysearch/json?radius=100&key=AIzaSyCulZQEPBA_aT5iBYTL20xK1MnDR_vH_EA', function(data){
-        $.each(data, function(key, value){
-          if(value.name.search(expression) != -1 || value.location.search(expression) != -1)
-          {
-            $('#result').append('<li class="list-group-item ><img src="" '+value.image+' height="40" width="40" class="img-thumbnail" />'+value.name+'| <span class= "text-muted'>'+value.location+'</span></li>');
-          }
-        });
-      })
+$(function() {
+  $("#search").click(function() {
+  
+    
+    var hotelList = $("#hotel-result");
+    var url = ('https://maps.googleapis.com/maps/api/place/textsearch/json?radius=50&type=lodging');
+    var key = ("AIzaSyBk5LOdLeNJzq29ecTtX9QgtA82tMSqx3w");
+   
+    // Get the JSON file
+    $.getJSON(url, key,  function(data) {
+
+      // Put artist info into a variable
+      var hotels = data.hotels.map(function(item) {
+        return item.hotelname + " (" + item.address + ")";
+      });
+      
+      // Remove all child nodes (including text nodes) 
+      hotelList.empty();
+
+      // Format artists with HTML tags 
+      if (hotels.length) {
+        var content = "<li>" + hotels.join("</li><li>") + "</li>";
+        var list = $("<ul>").html(content);
+        hotelList.append(list);
+      }
+    });
   });
-}); 
+});
