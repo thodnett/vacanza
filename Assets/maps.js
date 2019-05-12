@@ -1,4 +1,5 @@
 var center = new google.maps.LatLng(41.8719, 12.5674);
+var map;
 
 function initAutocomplete() {
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
@@ -7,63 +8,49 @@ function initAutocomplete() {
         mapTypeId: 'roadmap'
     });
    
-    var input = document.getElementById('pac-input');
-        var searchBox = new google.maps.places.SearchBox(input);
-        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-
-        
-        map.addListener('bounds_changed', function() {
-          searchBox.setBounds(map.getBounds());
-        });
-
-        var markers = [];
+   var service = new google.maps.places.PlacesService(map);
         
         
-        searchBox.addListener('places_changed', function() {
-          var places = searchBox.getPlaces();
+      service.nearbySearch(
+            {location: center, radius: 500, type: ['restaurant', 'lodging']},
+            function(results, status, pagination) {
+              if (status !== 'OK') return;
 
-          if (places.length == 0) {
-            return;
-          }
+              createMarkers(results);
+              moreButton.disabled = !pagination.hasNextPage;
+              getNextPage = pagination.hasNextPage && function() {
+                pagination.nextPage();
+              };
+            });
+      }
 
-          
-          markers.forEach(function(marker) {
-            marker.setMap(null);
+      function createMarkers(places) {
+        var bounds = new google.maps.LatLngBounds();
+        var placesList = document.getElementById('places');
+
+        for (var i = 0, place; place = places[i]; i++) {
+          var image = {
+            url: place.icon,
+            size: new google.maps.Size(71, 71),
+            origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(17, 34),
+            scaledSize: new google.maps.Size(25, 25)
+          };
+
+          var marker = new google.maps.Marker({
+            map: map,
+            icon: image,
+            title: place.name,
+            position: place.geometry.location
           });
-          markers = [];
 
-          
-          var bounds = new google.maps.LatLngBounds();
-          places.forEach(function(place) {
-            if (!place.geometry) {
-              console.log("Returned place contains no geometry");
-              return;
-            }
-            var icon = {
-              url: place.icon,
-              size: new google.maps.Size(71, 71),
-              origin: new google.maps.Point(0, 0),
-              anchor: new google.maps.Point(17, 34),
-              scaledSize: new google.maps.Size(25, 25)
-            };
+          var li = document.createElement('li');
+          li.textContent = place.name;
+          placesList.appendChild(li);
 
-            
-            markers.push(new google.maps.Marker({
-              map: map,
-              icon: icon,
-              title: place.name,
-              position: place.geometry.location
-            }));
-
-            if (place.geometry.viewport) {
-        
-              bounds.union(place.geometry.viewport);
-            } else {
-              bounds.extend(place.geometry.location);
-            }
-          });
-          map.fitBounds(bounds);
-        });
+          bounds.extend(place.geometry.location);
+        }
+        map.fitBounds(bounds);
       }
 
     $('.launch-map').on('click', function() {

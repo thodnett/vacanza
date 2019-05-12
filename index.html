@@ -9,12 +9,12 @@
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css" type="text/css" />
-  
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBk5LOdLeNJzq29ecTtX9QgtA82tMSqx3w&libraries=places&callback=initAutocomplete"></script>
-  
 
-  
-  
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBk5LOdLeNJzq29ecTtX9QgtA82tMSqx3w&libraries=places&callback=initAutocomplete"></script>
+
+
+
+
 
   <title>Travel</title>
 </head>
@@ -53,22 +53,22 @@
         <div class="carousel-item active">
           <img src="Assets/images/firstpics.jpg" class="d-block w-100" alt="street">
           <div class="carousel-caption d-none d-md-block">
-            <h2 class="carousel-head">Italy</h2>
-            <p class="carousel-para">Find your dream italian holiday.</p>
+            <h1 class="carousel-head1">Italy</h1>
+            <h2 class="carousel-para1">Find your dream italian holiday.</h2>
           </div>
         </div>
         <div class="carousel-item">
           <img src="Assets/images/food.jpg" class="d-block w-100" alt="pasta">
           <div class="carousel-caption d-none d-md-block">
-            <h2 class="carousel-head">Amazing food!</h2>
-            <p class="carousel-para">Find the best restaurants.</p>
+            <h1 class="carousel-head">Amazing food!</h1>
+            <h2 class="carousel-para">Find the best restaurants.</h2>
           </div>
         </div>
         <div class="carousel-item">
           <img src="Assets/images/thirdpic.jpg" class="d-block w-100" alt="colloseum">
           <div class="carousel-caption d-none d-md-block">
-            <h2 class="carousel-head">Attractions</h2>
-            <p class="carousel-para">Find the best things to do in your chosen city.</p>
+            <h1 class="carousel-head">Attractions</h1>
+            <h2 class="carousel-para">Find the best things to do in your chosen city.</h2>
           </div>
         </div>
       </div>
@@ -85,51 +85,69 @@
 
 </header>
 
-
-<section>
-  <div class="card text-center">
-    <div class="card-header">
-      Where will you go?
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">Find the perfect place!</h5>
-      <p class="card-text">Using our interactive map discover what each city has to offer!</p>
-      <button type="button" class="launch-map" data-toggle="modal" data-target="#mapModal">
+<body style="background-color:#ff;">
+  <section>
+    <div class="card text-center">
+      <div class="card-header">
+        Where will you go?
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Find the perfect place!</h5>
+        <p class="card-text">Using our interactive map discover what each city has to offer!</p>
+        <button type="button" class="launch-map" data-toggle="modal" data-target="#mapModal">
   Open Map
 </button>
-    </div>
-  </div>
-
-<div class="modal fade" id="mapModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="map">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalLabel">Italy</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
       </div>
-      <div id="modal">
-        <div class="modal-body">
-          <input id="pac-input" class="controls" type="text" placeholder="Search Box">
-          <div id="map-canvas"></div>
+    </div>
+
+
+
+    <div class="modal fade" id="mapModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="map">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel">Italy</h5>
+            <span aria-hidden="true">&times;</span>
+            </button>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <div id="modal">
+            <div class="modal-body">
+              <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+              <div id="map-canvas"></div>
+              <div id="result-panel">
+                <h2 id="results">Results</h2>
+              <ul id="places"></ul>
+    </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </section>
+
+  <p id="about">See what Italy has to offer, click on the images below or use our interactive map!</p>
+  <div id="thumbs">
+    <img src="Assets/images/win-hotel.jpg" id="hot1" alt="Will it be Italy's sprawling capital, or Milan a metropolis of art and design or maybe romantic Venice!" width="200px" height="200px">
+    <img src="Assets/images/out-hot.jpg" id="hot2" alt="Use our interactive map to find your perfect place to rest! Featuring the most amazing hotels in Venice, Rome, Florence, Amalfi Coast, Italian Lakes and other fabulous cities." width="200px" height="200px">
+    <img src="Assets/images/pizza.jpg"  id="food1" alt="The Italian cuisine is diverse, be it pasta dishes or fresh pizzas, you won't go hungry!"width="200" height="200">
+    <img src="Assets/images/icecream.jpg" id="food2" alt="Perhaps something sweet is more your thing, use our map to find your perfect restaurant."width="200" height="200">
+  <div id="reveal"</div>
   </div>
-</section>
+  
+  
+      
+     
+    
 
 
-        
-
-<script src="https://code.jquery.com/jquery-3.4.0.slim.min.js" integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script type="text/javascript" src="Assets/maps.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.0.slim.min.js" integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="Assets/maps.js"></script>
+  <script type="text/javascript" src="Assets/script.js"></script>
 
 
 

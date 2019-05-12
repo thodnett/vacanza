@@ -1,24 +1,167 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
+
+.carousel-head1 {
+    font-family: "Lato", sans-serif;
+    font-size: large;
+    color: #ffffff;
+
+}
+
+.carousel-para1 {
+    font-family: "Lato", sans-serif;
+    font-size: x-large;
+    color: #ffffff;
+}
+
 .carousel-head {
     font-family: "Lato", sans-serif;
     font-size: large;
     color: #000000;
-    
+
+}
+
+.carousel-para {
+    font-family: "Lato", sans-serif;
+    font-size: x-large;
+    color: #000000;
 }
 
 .card-header {
     font-family: "Lato", sans-serif;
     font-size: large;
-    
+
 }
 
 .card-body {
     font-family: "Lato", sans-serif;
 }
 
+.about {
+    font-family: "Lato", sans-serif;
+    text-align: center;
+}
+
+.thumbs {
+    display: table;
+    margin: 20px;
+    padding: 20px;
+}
+
+.reveal {
+    float: right;
+}
 
 
 #map-canvas {
     height: 400px;
 }
+
+.pac-card {
+    margin: 10px 10px 0 0;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    font-family: Lato;
+}
+
+#pac-container {
+    padding-bottom: 12px;
+    margin-right: 12px;
+}
+
+.pac-controls {
+    display: inline-block;
+    padding: 5px 11px;
+}
+
+.pac-controls label {
+    font-family: Lato;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+#pac-input {
+    background-color: #fff;
+    font-family: Lato;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 12px;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    width: 400px;
+}
+
+#pac-input:focus {
+    border-color: #4d90fe;
+}
+
+#title {
+    color: #fff;
+    background-color: #4d90fe;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 6px 12px;
+}
+
+#target {
+    width: 345px;
+}
+
+.result-panel {
+    font-family: "Lato", sans-serif;
+    line-height: 30px;
+    padding-left: 10px;
+}
+
+   #result-panel select, #right-panel input {
+        font-size: 15px;
+      }
+
+      #result-panel select {
+        width: 100%;
+      }
+
+      #result-panel i {
+        font-size: 12px;
+      }
+      
+      #result-panel {
+        font-family: Arial, Helvetica, sans-serif;
+        position: absolute;
+        right: 5px;
+        top: 60%;
+        margin-top: -195px;
+        height: 330px;
+        width: 200px;
+        padding: 5px;
+        z-index: 5;
+        border: 1px solid #999;
+        background: #fff;
+      }
+      
+      .results {
+        font-size: 22px;
+        margin: 0 0 5px 0;
+      }
+      .places {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        height: 271px;
+        width: 200px;
+        overflow-y: scroll;
+      }
+      .places li {
+        background-color: #f1f1f1;
+        padding: 10px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+     .places li:nth-child(odd) {
+        background-color: #fcfcfc;
+      }
