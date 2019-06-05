@@ -27,141 +27,216 @@
     color: #000000;
 }
 
-.card-header {
-    font-family: "Lato", sans-serif;
-    font-size: large;
 
-}
 
-.card-body {
-    font-family: "Lato", sans-serif;
-}
 
-.about {
-    font-family: "Lato", sans-serif;
+  .about {
     text-align: center;
-}
-
-.thumbs {
-    display: table;
-    margin: 20px;
-    padding: 20px;
-}
-
-.reveal {
-    float: right;
-}
-
-
-#map-canvas {
-    height: 400px;
-}
-
-.pac-card {
-    margin: 10px 10px 0 0;
-    border-radius: 2px 0 0 2px;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    outline: none;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    background-color: #fff;
-    font-family: Lato;
-}
-
-#pac-container {
-    padding-bottom: 12px;
-    margin-right: 12px;
-}
-
-.pac-controls {
-    display: inline-block;
-    padding: 5px 11px;
-}
-
-.pac-controls label {
-    font-family: Lato;
-    font-size: 13px;
-    font-weight: 300;
-}
-
-#pac-input {
-    background-color: #fff;
-    font-family: Lato;
-    font-size: 15px;
-    font-weight: 300;
-    margin-left: 12px;
-    padding: 0 11px 0 13px;
-    text-overflow: ellipsis;
-    width: 400px;
-}
-
-#pac-input:focus {
-    border-color: #4d90fe;
-}
-
-#title {
-    color: #fff;
-    background-color: #4d90fe;
-    font-size: 25px;
-    font-weight: 500;
-    padding: 6px 12px;
-}
-
-#target {
-    width: 345px;
-}
-
-.result-panel {
-    font-family: "Lato", sans-serif;
-    line-height: 30px;
-    padding-left: 10px;
-}
-
-   #result-panel select, #right-panel input {
-        font-size: 15px;
-      }
-
-      #result-panel select {
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 24px;
+  
+  }
+  
+   /* Style all map elements */
+  
+   #map {
+        height: 500px;
         width: 100%;
+        float: right;
+        padding: 10px;
+        margin: 20px;
+        border: medium;
+        display: table;
       }
-
-      #result-panel i {
+      
+      .table {
         font-size: 12px;
       }
       
-      #result-panel {
-        font-family: Arial, Helvetica, sans-serif;
-        position: absolute;
-        right: 5px;
-        top: 60%;
-        margin-top: -195px;
-        height: 330px;
-        width: 200px;
-        padding: 5px;
-        z-index: 5;
-        border: 1px solid #999;
-        background: #fff;
+      
+     
+      #listing {
+        float: right;
+        position: fixed;
+        width: 400px;
+        height: 470px;
+        overflow: auto;
+        cursor: pointer;
+        overflow-x: hidden;
+        position: relative;
+        top: 50px;
+        
+    
       }
       
-      .results {
-        font-size: 22px;
-        margin: 0 0 5px 0;
+      #findhotels {
+        position: absolute;
+        text-align: right;
+        width: 100px;
+        font-size: 14px;
+        padding: 4px;
+        z-index: 5;
+        background-color: #fff;
       }
-      .places {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        height: 271px;
-        width: 200px;
-        overflow-y: scroll;
+      
+      #locationField {
+        position: absolute;
+        width: 190px;
+        height: 25px;
+        left: 108px;
+        z-index: 5;
+        background-color: #fff;
       }
-      .places li {
-        background-color: #f1f1f1;
-        padding: 10px;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
+      #controls {
+        position: absolute;
+        left: 300px;
+        width: 140px;
+        z-index: 5;
+        background-color: #fff;
       }
-     .places li:nth-child(odd) {
-        background-color: #fcfcfc;
+      #autocomplete {
+        width: 100%;
       }
+      #country {
+        width: 100%;
+      }
+      .placeIcon {
+        width: 20px;
+        height: 34px;
+        margin: 4px;
+      }
+      .hotelIcon {
+        width: 24px;
+        height: 24px;
+      }
+      #resultsTable {
+        border-collapse: collapse;
+        width: 240px;
+        float: right;
+      }
+      
+      #rating {
+        font-size: 13px;
+        font-family: Arial Unicode MS;
+      }
+      .iw_table_row {
+        height: 18px;
+      }
+      .iw_attribute_name {
+        font-weight: bold;
+        text-align: right;
+      }
+      .iw_table_icon {
+        text-align: right;
+      }
+      
+      .map-search {
+        float: right;
+      
+      }
+      
+      
+      
+      /* Style all font awesome icons */
+      
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+
+
+ /* Style widget */
+ 
+ .widget_wrap {
+   width: 520px;
+   height: 504px;
+   display: inline-block;
+   position: relative;
+   padding-bottom: 56.25%;
+   padding-top: 60px;
+   overflow: hidden;
+ }
+  
+  .widget_wrap iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  .foods {
+   display: inline-block;
+   padding-top: 60px;
+  }
+  
+  
+  
+ /* Style all cards */
+
+.card-body {
+  text-align: center;
+}
+
+.card-body2 {
+  text-align: center;
+}
+
+ /* Style the footer */
+ 
+ .fo1 {
+   background-color: #000000;
+  
+   
+ }
+
+/* Facebook */
+.fa-facebook {
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  color: white;
+}
+
+/* Instagram */
+.fa-instagram {
+  color: white;
+}
+
+/* Github */
+.fa-github {
+  color: white;
+}
+
+/* Span text */
+.fas {
+  color:white;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+  color: grey;
+}
+
+.fo2 { 
+  color: white;
+  margin: 10px;
+}
+
+.fo3 {
+  color: white;
+  float: right;
+  margin: 10px;
+}
