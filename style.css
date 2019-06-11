@@ -4,40 +4,53 @@
 .carousel-head1 {
     font-family: "Lato", sans-serif;
     font-size: large;
-    color: #ffffff;
+    color: white;
 
 }
 
 .carousel-para1 {
     font-family: "Lato", sans-serif;
     font-size: x-large;
-    color: #ffffff;
+    color: white;
 }
 
 .carousel-head {
     font-family: "Lato", sans-serif;
     font-size: large;
-    color: #000000;
+    color: white;
 
 }
 
 .carousel-para {
     font-family: "Lato", sans-serif;
     font-size: x-large;
-    color: #000000;
+    color: white;
+}
+
+/* Style Top button */
+
+#topBtn {
+  display: none; 
+  position: fixed; 
+  bottom: 20px;
+  right: 50PX;
+  z-index: 99; 
+  border: none; 
+  outline: none; 
+  background-color: black; 
+  color: white;
+  cursor: pointer; 
+  padding: 15px; 
+  border-radius: 10px; 
+  font-size: 18px; 
+}
+
+#topBtn:hover {
+  background-color: #555; 
 }
 
 
 
-
-  .about {
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 400;
-    letter-spacing: 2px;
-    font-size: 24px;
-  
-  }
   
    /* Style all map elements */
   
@@ -119,7 +132,7 @@
       
       #rating {
         font-size: 13px;
-        font-family: Arial Unicode MS;
+        font-family: "Lato";
       }
       .iw_table_row {
         height: 18px;
@@ -174,9 +187,12 @@
     margin: 10px;
   }
   
+  /* float div */
+  
   .foods {
    display: inline-block;
    padding-top: 60px;
+   padding-right:60px;
   }
   
   
@@ -185,10 +201,21 @@
 
 .card-body {
   text-align: center;
+  font-family: "Lato", sans-serif;
 }
 
 .card-body2 {
   text-align: center;
+  font-family: "Lato", sans-serif;
+}
+
+/*paragraph style*/
+
+#food {
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  border-style: solid;
+  border-width: thin;
 }
 
  /* Style the footer */
@@ -242,3 +269,4 @@
   margin: 10px;
   font-family: "Lato", sans-serif;
 }
+
