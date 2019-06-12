@@ -29,7 +29,7 @@
 
 /* Style Top button */
 
-#topBtn {
+#button{
   display: none; 
   position: fixed; 
   bottom: 20px;
@@ -45,7 +45,7 @@
   font-size: 18px; 
 }
 
-#topBtn:hover {
+#button:hover {
   background-color: #555; 
 }
 
