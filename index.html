@@ -6,17 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-
+  <a href="javascript:" id="return-to-top"><i class="fas fa-cloud-upload-alt"></i></a>
+  
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css" type="text/css" />
 
-  <a id="button"></a>
-
-
-
-
+ 
 
   <title>Travel</title>
 </head>
@@ -32,7 +29,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#findhotels">Hotels</a>
+          <a class="nav-link" href="#locationField">Hotels</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#food">Restaurants</a>
@@ -86,6 +83,7 @@
 
 <body>
   
+
 <section>
 <div class="card-body">
       <h5 class="card-title">Find the perfect place to rest your head!</h5>
@@ -121,12 +119,12 @@
   
   <div id="map"></div>
   
-    <!---<div id="listing">
+    <div id="listing">
       <table id="resultsTable">
         <tbody id="results"></tbody>
       </table>
     </div>
-</div> ------>
+</div> 
 
 
 
@@ -168,14 +166,7 @@
     </div>
     
     
-<div class="row" style="padding-bottom: 20px">
-	<div class="col-sm-6" style="padding-bottom: 20px">
-<div class="widget_wrap"><iframe src="https://www.zomato.com/widgets/res_search_widget.php?entity_id=280&entity_type=city&city_id=280&theme=dark&widgetType=large&sort=popularity" border="0" frameborder="0"></iframe></div>
- </div>
- 
-    
-    
-    <div class="foods col-sm-6">
+<div class="foods col-lg-12 col-md-6 col-sm-6">
       <p id="food">There are about 200 countries in the world, and every country has its own traditional food. Food is part of every country’s culture.  It is what makes countries unique.
       Sashimi is one of Japan’s traditional food. Sashimi is sliced raw fish eaten with ginger and soy sauce mixed with wasabi.
       One of Spain’s traditional food is Mejillones rellenos. Mejillones rellenos is stuffed mussels, called tigres (“tiger”) in Navarre because of the spicy taste.
@@ -185,19 +176,26 @@
       </p>
       </div>
   
-    </div>
+  
+<div class="resp-container col-lg">
+<iframe class="resp-iframe" src="https://www.zomato.com/widgets/res_search_widget.php?entity_id=280&entity_type=city&city_id=280&theme=dark&widgetType=large&sort=popularity" border="0" frameborder="0"></iframe>
+ </div>
+ 
+    
+    
+
     </section>
-     
+    
+    
      
   <footer class="fo1">
     <h2 class="fo2">Find us on!</h2>
-    <a href="#" class="fa fa-facebook"></a><span class="fas">Share</span>
-    <a href="#" class="fa fa-twitter"></a><span class="fas">Tweet</span>
-    <a href="#" class="fa fa-instagram"></a>
-    <a href="#" class="fa fa-github"></a>
+    <a href="#" class="fab fa-facebook"></a><span class="fas">Share</span>
+    <a href="#" class="fab fa-twitter"></a><span class="fas">Tweet</span>
+    <a href="#" class="fab fa-instagram"></a>
+    <a href="#" class="fab fa-github"></a>
     
-    
-    <h3 class="fo3">Created by Tania Hodnett</h3>
+
 
 
   </footer>
@@ -210,6 +208,7 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/b6aa2fb26d.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBk5LOdLeNJzq29ecTtX9QgtA82tMSqx3w&libraries=places&callback=initMap"></script>
   <script type="text/javascript" src="Assets/maps.js"></script>
   <script type="text/javascript" src="Assets/script.js"></script>

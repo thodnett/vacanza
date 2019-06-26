@@ -1,21 +1,12 @@
-jQuery(document).ready(function() {
-  
-  var btn = $('#button');
-  
-  $(window).scroll(function() {
-    if ($(window).scrollTop() > 20) {
-      btn.addClass('show');
-      
+$(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+        $('#return-to-top').fadeIn(200);    // Fade in the arrow
     } else {
-      btn.removeClass('show');
+        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
     }
-    
-  });
-  
-  btn.on('click', function (e) { 
-    e.preventDefault();
-    $('html', 'body').animate({scrollTop:0}, '20');
-    
-  });
-  
-})
+});
+$('#return-to-top').click(function() {      // When arrow is clicked
+    $('body,html').animate({
+        scrollTop : 0                       // Scroll to top of body
+    }, 500);
+});

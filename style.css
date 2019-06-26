@@ -29,29 +29,45 @@
 
 /* Style Top button */
 
-#button{
-  display: none; 
-  position: fixed; 
-  bottom: 20px;
-  right: 50PX;
-  z-index: 99; 
-  border: none; 
-  outline: none; 
-  background-color: black; 
-  color: white;
-  cursor: pointer; 
-  padding: 15px; 
-  border-radius: 10px; 
-  font-size: 18px; 
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top i {
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top:hover {
+    background: #cdc9c9;
+}
+#return-to-top:hover i {
+  top: 5px;
 }
 
-#button:hover {
-  background-color: #555; 
-}
-
-
-
-  
    /* Style all map elements */
   
    #map {
@@ -111,9 +127,11 @@
       }
       #autocomplete {
         width: 100%;
+        height: 20px;
       }
       #country {
         width: 100%;
+        height: 20px;
       }
       .placeIcon {
         width: 20px;
@@ -154,7 +172,7 @@
       
       /* Style all font awesome icons */
       
-.fa {
+.fab {
   padding: 20px;
   font-size: 30px;
   width: 50px;
@@ -162,38 +180,32 @@
   text-decoration: none;
 }
 
+.fab:hover {
+  color: #cdc9c9;
+}
 
 
 
  /* Style widget */
  
- .widget_wrap {
-   width: 520px;
-   height: 504px;
-   display: inline-block;
-   position: relative;
-   padding-bottom: 56.25%;
-   padding-top: 60px;
-   overflow: hidden;
- }
-  
-  .widget_wrap iframe {
+.resp-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+    
+}
+
+.resp-iframe {
     position: absolute;
-    width: 100%;
-    height: 100%;
     top: 0;
     left: 0;
-    padding: 10px;
-    margin: 10px;
-  }
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
   
-  /* float div */
   
-  .foods {
-   display: inline-block;
-   padding-top: 60px;
-   padding-right:60px;
-  }
   
   
   
@@ -213,18 +225,12 @@
 
 #food {
   font-family: "Lato", sans-serif;
-  text-align: center;
-  border-style: solid;
-  border-width: thin;
 }
+
+
 
  /* Style the footer */
  
- .fo1 {
-   background-color: #000000;
-  
-   
- }
 
 /* Facebook */
 .fa-facebook {
@@ -261,12 +267,10 @@
   color: white;
   margin: 10px;
   font-family: "Lato", sans-serif;
+  
 }
 
-.fo3 {
-  color: white;
-  float: right;
-  margin: 10px;
-  font-family: "Lato", sans-serif;
+.fo1 {
+  background-image: url(Assets/images/sand.jpg);
+  padding: 20px;
 }
-
