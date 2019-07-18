@@ -1,12 +1,14 @@
+var btn = $('#button');
+
 $(window).scroll(function() {
-    if ($(this).scrollTop() >= 50) {        
-        $('#return-to-top').fadeIn(200);    
-    } else {
-        $('#return-to-top').fadeOut(200);   
-    }
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
 });
-$('#return-to-top').click(function() {      
-    $('body,html').animate({
-        scrollTop : 0                       
-    }, 500);
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
 });

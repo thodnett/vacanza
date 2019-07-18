@@ -6,37 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <a href="javascript:" id="return-to-top"><i class="fas fa-cloud-upload-alt"></i></a>
+ <a id="button"></a>
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css" type="text/css" />
 
- 
+ <body>
 
   <title>Travel</title>
 </head>
 
 <header>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#brand">Vacanza</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#locationField">Hotels</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#food">Restaurants</a>
-        </li>
-      </ul>
-    </div>
+  <nav class="navbar fixed-top  navbar-light bg-light">
+    <a class="navbar-brand" href="#">Vacanza</a>
+          <a class="nav-link" href="#autocomplete">Hotels</a>
+          <a class="nav-link" href="#card-body2">Restaurants</a>
   </nav>
+
 
   <div class="bd-example">
     <div id="carouselCaptions" class="carousel slide" data-ride="carousel">
@@ -81,7 +70,7 @@
 
 </header>
 
-<body>
+
   
 
 <section>
@@ -92,13 +81,11 @@
  
   
 
-    <div id="locationField">
-      <input id="autocomplete" placeholder="Enter a city" type="text" />
-    </div>
-
+   <input type="text" class="form-control" id="autocomplete" aria-describedby="search" placeholder="Enter a city">
+  
     <div id="controls">
-      <select id="country">
-        <option value="all">All</option>
+      <select id="country" class="custom-select">
+        <option selected>Select Country</option>
         <option value="au">Australia</option>
         <option value="br">Brazil</option>
         <option value="ca">Canada</option>
@@ -114,19 +101,16 @@
         <option value="uk">United Kingdom</option>
       </select>
     </div>
-  </div>
+  
   
   
   <div id="map"></div>
   
-    <div id="listing">
+  <div id="listing">
       <table id="resultsTable">
         <tbody id="results"></tbody>
       </table>
     </div>
-</div> 
-
-
 
     <div style="display: none">
       <div id="info-content">
@@ -160,13 +144,13 @@
    <section>
      
   
-    <div class="card-body2">
+    <div class="card-body2" id="card-body2">
       <h5 class="card-title">Find the perfect place to eat and drink!</h5>
       <p class="card-text">Search for the best restaurants and bars!</p>
     </div>
     
     
-<div class="foods col-lg-12 col-md-6 col-sm-6">
+<div class="foods col-lg-12">
       <p id="food">There are about 200 countries in the world, and every country has its own traditional food. Food is part of every country’s culture.  It is what makes countries unique.
       Sashimi is one of Japan’s traditional food. Sashimi is sliced raw fish eaten with ginger and soy sauce mixed with wasabi.
       One of Spain’s traditional food is Mejillones rellenos. Mejillones rellenos is stuffed mussels, called tigres (“tiger”) in Navarre because of the spicy taste.
@@ -175,6 +159,7 @@
       What type of cuisine will you choose? 
       </p>
       </div>
+    
   
   
 <div class="resp-container col-lg">
