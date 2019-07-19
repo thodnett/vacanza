@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
- <a id="button"></a>
-  
+
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -15,15 +14,17 @@
 
  <body>
 
+ <a id="button"></a>
+  
   <title>Travel</title>
 </head>
 
 <header>
-
-  <nav class="navbar fixed-top  navbar-light bg-light">
+  
+ <nav class="navbar fixed-top  navbar-light bg-light">
     <a class="navbar-brand" href="#">Vacanza</a>
-          <a class="nav-link" href="#autocomplete">Hotels</a>
-          <a class="nav-link" href="#card-body2">Restaurants</a>
+          <a class="nav-link" href="#hotel-search">Hotels</a>
+          <a class="nav-link" href="#rest-search">Restaurants</a>
   </nav>
 
 
@@ -74,12 +75,13 @@
   
 
 <section>
-<div class="card-body">
+  
+
+<div class="card-body" id="hotel-search">
       <h5 class="card-title">Find the perfect place to rest your head!</h5>
       <p class="card-text">Use our map to find the most amazing hotels!</p>
     </div>
  
-  
 
    <input type="text" class="form-control" id="autocomplete" aria-describedby="search" placeholder="Enter a city">
   
@@ -144,11 +146,11 @@
    <section>
      
   
-    <div class="card-body2" id="card-body2">
+    <div class="card-body2" id="rest-search">
       <h5 class="card-title">Find the perfect place to eat and drink!</h5>
       <p class="card-text">Search for the best restaurants and bars!</p>
     </div>
-    
+   
     
 <div class="foods col-lg-12">
       <p id="food">There are about 200 countries in the world, and every country has its own traditional food. Food is part of every country’s culture.  It is what makes countries unique.
