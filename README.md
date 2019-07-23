@@ -34,11 +34,13 @@ Testing
    a city, it brings up the hotels as expected. It also shows nearby attractions.
 3. Zomato restaurant search - Tested by entering a city or cuisine into the search
    bar and it returns the correct information.
+4. Tested the deployed project on various screen sizes and it responds well. 
 
 Deployment 
 ------------------------------------------------------------------------------
 
-Project deployed on github pages.
+Project deployed on github pages. 
+https://thodnett.github.io/vacanza/.
 
 Credit
 --------------------------------------------------------------------------------
